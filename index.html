@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Correos Corporativos H2O</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#f4f6f9;
+}
+
+/* HEADER */
+.header{
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+    flex-wrap:wrap;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.header img{
+    width:90px;
+}
+
+.header h1{
+    margin:0;
+    color:#0b3d91;
+    font-size:26px;
+}
+
+/* CONTENEDOR */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+/* ÁREA */
+.area{
+    background:white;
+    margin-bottom:30px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    overflow:hidden;
+}
+
+.area-title{
+    background:#0b3d91;
+    color:white;
+    padding:14px;
+    text-align:center;
+    font-weight:bold;
+    letter-spacing:1px;
+    font-size:15px;
+}
+
+/* TABLA */
+.tabla{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed; /* 🔥 alineación perfecta */
+}
+
+/* Tamaño específico por columna */
+.tabla th:nth-child(1),
+.tabla td:nth-child(1){
+    width:30%;
+}
+
+.tabla th:nth-child(2),
+.tabla td:nth-child(2){
+    width:25%;
+}
+
+.tabla th:nth-child(3),
+.tabla td:nth-child(3){
+    width:30%;
+}
+
+.tabla th:nth-child(4),
+.tabla td:nth-child(4){
+    width:15%;
+    text-align:center; /* teléfono centrado */
+}
+
+.tabla th,
+.tabla td{
+    padding:12px 14px;
+    border-bottom:1px solid #ddd;
+    font-size:14px;
+    word-break:break-word;
+    vertical-align:middle;
+}
+
+.tabla th{
+    background:#f0f2f5;
+    font-weight:bold;
+    color:#333;
+}
+
+.tabla tr:hover{
+    background:#f9fbff;
+}
+
+.correo{
+    color:#0b3d91;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.correo:hover{
+    text-decoration:underline;
+}
+
+@media (max-width:768px){
+
+    .header{
+        flex-direction:column;
+    }
+
+    .header img{
+        width:70px;
+    }
+
+    .header h1{
+        font-size:20px;
+    }
+
+    /* 🔥 Quitamos estructura de tabla */
+    .tabla{
+        table-layout:auto;
+    }
+
+    .tabla thead{
+        display:none;
+    }
+
+    .tabla,
+    .tabla tbody,
+    .tabla tr{
+        display:block;
+        width:100%;
+    }
+
+    .tabla tr{
+        background:white;
+        margin:15px 10px;
+        padding:15px;
+        border-radius:12px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.08);
+        border:none;
+    }
+
+    /* 🔥 IMPORTANTÍSIMO: quitamos anchos fijos */
+    .tabla th,
+    .tabla td{
+        width:100% !important;
+    }
+
+    .tabla td{
+        display:block;
+        padding:6px 0;
+        border:none;
+        font-size:14px;
+        word-break:normal;        /* 🔥 evita letra por letra */
+        overflow-wrap:break-word; /* rompe solo si es necesario */
+        text-align:left !important;
+    }
+
+    .tabla td::before{
+        content:attr(data-label);
+        display:block;
+        font-weight:bold;
+        color:#0b3d91;
+        margin-bottom:3px;
+        font-size:13px;
+    }
+
+    .correo{
+        display:block;
+        text-align:left;
+        word-break:break-word;
+    }
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <img src="https://res.cloudinary.com/daib0eknj/image/upload/v1770840245/Logo_H2O_st7uih.png" alt="Logo H2O">
+    <h1>CORREOS CORPORATIVOS</h1>
+</div>
+
+<div class="container">
+
+<!-- GERENCIA -->
+<div class="area">
+<div class="area-title">ÁREA DE GERENCIA</div>
+<table class="tabla"><tbody>
+<tr>
+<td data-label="Correo"><a class="correo" href="mailto:gerencia@h2ocolombia.com">gerencia@h2ocolombia.com</a></td>
+<td data-label="Nombre">Gabriel Ospina</td>
+<td data-label="Cargo">Gerente General</td>
+<td data-label="Teléfono">3102480727</td>
+</tr>
+</tbody></table>
+</div>
+
+<!-- MANTENIMIENTO -->
+<div class="area">
+<div class="area-title">ÁREA DE MANTENIMIENTO</div>
+<table class="tabla"><tbody>
+
+<tr><td data-label="Correo"><a class="correo" href="mailto:mantenimiento@h2ocolombia.com">mantenimiento@h2ocolombia.com</a></td><td data-label="Nombre">Daniel Viracacha</td><td data-label="Cargo">Director de Mantenimiento</td><td data-label="Teléfono">3204574249</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:planeacion@h2ocolombia.com">planeacion@h2ocolombia.com</a></td><td data-label="Nombre">Johann Marcell</td><td data-label="Cargo">Planeador de Mantenimiento</td><td data-label="Teléfono">3188155661</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:almacen_mantenimineto@h2ocolombia.com">almacen_mantenimineto@h2ocolombia.com</a></td><td data-label="Nombre">Jose Castro</td><td data-label="Cargo">Almacenista</td><td data-label="Teléfono">3203560123</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:gestor_mantenimiento@h2ocolombia.com">gestor_mantenimiento@h2ocolombia.com</a></td><td data-label="Nombre">John Nieto</td><td data-label="Cargo">Gestor de mantenimiento</td><td data-label="Teléfono">3186953453</td></tr>
+</tbody></table>
+</div>
+
+<!-- CALIDAD -->
+<div class="area">
+<div class="area-title">ÁREA DE CALIDAD</div>
+<table class="tabla"><tbody>
+<tr><td data-label="Correo"><a class="correo" href="mailto:gerencia_calidad@h2ocolombia.com">gerencia_calidad@h2ocolombia.com</a></td><td data-label="Nombre">Carmen Ramos</td><td data-label="Cargo">Gerente de calidad</td><td data-label="Teléfono">3012988842</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:procesos-oea@h2ocolombia.com">procesos-oea@h2ocolombia.com</a></td><td data-label="Nombre">Juan Carlos Bravo</td><td data-label="Cargo">Coordinador de procesos especiales OEA</td><td data-label="Teléfono">3154645085</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:calidad@h2ocolombia.com">calidad@h2ocolombia.com</a></td><td data-label="Nombre">Geraldine Rojas</td><td data-label="Cargo">Analista de aseguramiento de empaques</td><td data-label="Teléfono">3166147429</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:ambiental@h2ocolombia.com">ambiental@h2ocolombia.com</a></td><td data-label="Nombre">Erika Cortes</td><td data-label="Cargo">Analista ambiental</td><td data-label="Teléfono">3122864329</td></tr>
+</tbody></table>
+</div>
+
+<!-- CONTABILIDAD -->
+<div class="area">
+<div class="area-title">ÁREA DE CONTABILIDAD</div>
+<table class="tabla"><tbody>
+<tr><td data-label="Correo"><a class="correo" href="mailto:cartera@h2ocolombia.com">cartera@h2ocolombia.com</a></td><td data-label="Nombre">Roberto Carlos</td><td data-label="Cargo">Contador</td><td data-label="Teléfono">3142555815</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:contabilidad@h2ocolombia.com">contabilidad@h2ocolombia.com</a></td><td data-label="Nombre">Roberto Carlos</td><td data-label="Cargo">Contador</td><td data-label="Teléfono">3142555815</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:tesoreria@h2ocolombia.com">tesoreria@h2ocolombia.com</a></td><td data-label="Nombre">Diana Paola Torrez</td><td data-label="Cargo">Directora de Tesorería</td><td data-label="Teléfono">3107839793</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:facturacion@h2ocolombia.com">facturacion@h2ocolombia.com</a></td><td data-label="Nombre">Andres Bonilla</td><td data-label="Cargo">Analista Contable</td><td data-label="Teléfono">3142555815</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:contabilidad2@h2ocolombia.com">contabilidad2@h2ocolombia.com</a></td><td data-label="Nombre">Diana Rodriguez</td><td data-label="Cargo">Analista Contable</td><td data-label="Teléfono">3142555815</td></tr>
+</tbody></table>
+</div>
+
+<!-- Area de Recursos Humanos -->
+<div class="area">
+<div class="area-title">ÁREA DE RECCURSOS HUMANOS</div>
+<table class="tabla"><tbody>
+<tr><td data-label="Correo"><a class="correo" href="mailto:dir.rrhh@h2ocolombia.com">dir.rrhh@h2ocolombia.com</a></td><td data-label="Nombre">Paola Andrea James</td><td data-label="Cargo">Directora de Recursos Humanos</td><td data-label="Teléfono">3103894677</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:coordinacion.rrhh@h2ocolombia.com">coordinacion.rrhh@h2ocolombia.com</a></td><td data-label="Nombre">Leidy Tatiana López</td><td data-label="Cargo">Coordinadora de Recursos Humanos</td><td data-label="Teléfono">3103894677</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:analista.sst@h2ocolombia.com">analista.sst@h2ocolombia.com</a></td><td data-label="Nombre">Walter Alejandro Franco</td><td data-label="Cargo">Analista de Seguridad y Salud en el Trabajo</td><td data-label="Teléfono">3103894677</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:rrhh@h2ocolombia.com">rrhh@h2ocolombia.com</a></td><td data-label="Nombre">Helen Chavez</td><td data-label="Cargo">Coordinadora de nómina</td><td data-label="Teléfono">3103894706</td></tr>
+</tbody></table>
+</div>
+
+<!-- Area de Logistica -->
+<div class="area">
+<div class="area-title">ÁREA DE LOGÍSTICA</div>
+<table class="tabla"><tbody>
+<tr><td data-label="Correo"><a class="correo" href="mailto:logistica@h2ocolombia.com">logistica@h2ocolombia.com</a></td><td data-label="Nombre">Daniel Cubides</td><td data-label="Cargo">Director de logística</td><td data-label="Teléfono">3115703792</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:bodega@h2ocolombia.com">bodega@h2ocolombia.com</a></td><td data-label="Nombre">Luis Figueroa</td><td data-label="Cargo">Lider de bodega</td><td data-label="Teléfono">3107218359</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:coordinacionlogistica@h2ocolombia.com">coordinacionlogistica@h2ocolombia.com</a></td><td data-label="Nombre">Juan David Wilches</td><td data-label="Cargo">Coordinador de logística</td><td data-label="Teléfono">3115736920</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:facturacionlogistica@h2ocolombia.com">facturacionlogistica@h2ocolombia.com</a></td><td data-label="Nombre">Valentina Sanchez</td><td data-label="Cargo">Analista de logistica</td><td data-label="Teléfono">3007467111</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:devoluciones@h2ocolombia.com">devoluciones@h2ocolombia.com</a></td><td data-label="Nombre">Santiago Ortiz</td><td data-label="Cargo">Aprendiz Sena</td><td data-label="Teléfono">3106679838</td></tr>
+</tbody></table>
+</div>
+
+<!-- Area de producción y soplado -->
+<div class="area">
+<div class="area-title">ÁREA DE PRODUCCIÓN Y SOPLADO</div>
+<table class="tabla"><tbody>
+<tr><td data-label="Correo"><a class="correo" href="mailto:geroperaciones@h2ocolombia.com">geroperaciones@h2ocolombia.com</a></td><td data-label="Nombre">Luis Ortiz</td><td data-label="Cargo">Gerente de operaciones</td><td data-label="Teléfono">3108855058</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:jefeproduccion@h2ocolombia.com">jefeproduccion@h2ocolombia.com</a></td><td data-label="Nombre">Jorge Galeano</td><td data-label="Cargo">Jefe de producción</td><td data-label="Teléfono">3112467665</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:soplado@h2ocolombia.com">soplado@h2ocolombia.com</a></td><td data-label="Nombre">Fredy Patiño</td><td data-label="Cargo">Coordinador de soplado</td><td data-label="Teléfono">3204310589</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:analista.produccion@h2ocolombia.com">analista.produccion@h2ocolombia.com</a></td><td data-label="Nombre">Marcela Cardenas</td><td data-label="Cargo">Analista de procesos y estadística</td><td data-label="Teléfono">3107894567</td></tr>
+</tbody></table>
+</div>
+
+<!-- Area de Inventarios -->
+<div class="area">
+<div class="area-title">ÁREA DE INVENTARIOS</div>
+<table class="tabla"><tbody>
+<tr><td data-label="Correo"><a class="correo" href="mailto:dir.inventarios@h2ocolombia.com">dir.inventarios@h2ocolombia.com</a></td><td data-label="Nombre">Kevin Diaz</td><td data-label="Cargo">Analista de inventarios</td><td data-label="Teléfono">3506294146</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:analista.inventarios@h2ocolombia.com">analista.inventarios@h2ocolombia.com</a></td><td data-label="Nombre">Tatiana Ortega</td><td data-label="Cargo">Asistente de inventarios</td><td data-label="Teléfono">3115053226</td></tr>
+</tbody></table>
+</div>
+
+
+<!-- Area de Compras -->
+<div class="area">
+<div class="area-title">ÁREA DE COMPRAS</div>
+<table class="tabla"><tbody>
+<tr><td data-label="Correo"><a class="correo" href="mailto:dir.compras@h2ocolombia.com">dir.compras@h2ocolombia.com</a></td><td data-label="Nombre">Alejandra Martinez</td><td data-label="Cargo">Directora de compras</td><td data-label="Teléfono">3197074145</td></tr>
+</tbody></table>
+</div>
+
+<!-- Area de sistemas -->
+<div class="area">
+<div class="area-title">ÁREA DE SISTEMAS</div>
+<table class="tabla"><tbody>
+<tr><td data-label="Correo"><a class="correo" href="mailto:sistemas@h2ocolombia.com">sistemas@h2ocolombia.com</a></td><td data-label="Nombre">Felipe Garcia</td><td data-label="Cargo">Analista de sistemas</td><td data-label="Teléfono">3193865914</td></tr>
+</tbody></table>
+</div>
+
+<!-- Area juridica -->
+<div class="area">
+<div class="area-title">ÁREA JURÍDICA</div>
+<table class="tabla"><tbody>
+<tr><td data-label="Correo"><a class="correo" href="mailto:juridico@h2ocolombia.com">juridico@h2ocolombia.com</a></td><td data-label="Nombre">Andres Fandiño</td><td data-label="Cargo">Abogado juridico</td><td data-label="Teléfono">NO APLICA</td></tr>
+</tbody></table>
+</div>
+
+<!-- ÁREA DE SEGURIDAD Y RECEPCIÓN -->
+<div class="area">
+<div class="area-title">ÁREA DE SEGURIDAD Y RECEPCIÓN</div>
+<table class="tabla"><tbody>
+<tr><td data-label="Correo"><a class="correo" href="mailto:ryseg@h2ocolombia.com">ryseg@h2ocolombia.com</a></td><td data-label="Nombre">Bezaida Rojas</td><td data-label="Cargo">Oficial de recepción y seguridad</td><td data-label="Teléfono">3212315500</td></tr>
+<tr><td data-label="Correo"><a class="correo" href="mailto:ryseg@h2ocolombia.com">ryseg@h2ocolombia.com</a></td><td data-label="Nombre">Leidy Rodriguez</td><td data-label="Cargo">Oficial de recepción y seguridad</td><td data-label="Teléfono">3132590704</td></tr>
+</tbody></table>
+</div>
+</div>
+</body>
+</html>
