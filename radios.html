@@ -1,0 +1,313 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radios Asignados H2O</title>
+    <style>
+    * { box-sizing: border-box; }
+
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+    }
+
+    .header {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    }
+
+    .header img { width: 90px; }
+
+    .header h1 {
+    margin: 0;
+    color: #0b3d91;
+    font-size: 26px;
+    }
+
+    .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    }
+
+    .area {
+    background: white;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+    }
+
+    .area-title {
+    background: #0b3d91;
+    color: white;
+    padding: 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+    }
+
+    .tabla {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    }
+
+    .tabla th:nth-child(1), .tabla td:nth-child(1) { width: 20%; }
+    .tabla th:nth-child(2), .tabla td:nth-child(2) { width: 25%; }
+    .tabla th:nth-child(3), .tabla td:nth-child(3) { width: 15%; text-align: center; }
+    .tabla th:nth-child(4), .tabla td:nth-child(4) { width: 25%; }
+    .tabla th:nth-child(5), .tabla td:nth-child(5) { width: 15%; text-align: center; }
+
+    .tabla th, .tabla td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    word-break: break-word;
+    vertical-align: middle;
+    }
+
+    .tabla th {
+    background: #f0f2f5;
+    font-weight: bold;
+    color: #333;
+    }
+
+    .tabla tr:hover { background: #f9fbff; }
+
+    .codigo {
+    font-weight: bold;
+    color: #0b3d91;
+    font-family: monospace;
+    font-size: 13px;
+    }
+
+    .canal {
+    background: #e8f0fe;
+    color: #0b3d91;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+    .header { flex-direction: column; }
+    .header img { width: 70px; }
+    .header h1 { font-size: 20px; }
+    .tabla { table-layout: auto; }
+    .tabla thead { display: none; }
+    .tabla, .tabla tbody, .tabla tr { display: block; width: 100%; }
+    .tabla tr {
+        background: white;
+        margin: 15px 10px;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        border: none;
+    }
+    .tabla th, .tabla td { width: 100% !important; }
+    .tabla td {
+        display: block;
+        padding: 6px 0;
+        border: none;
+        font-size: 14px;
+        text-align: left !important;
+    }
+    .tabla td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: bold;
+        color: #0b3d91;
+        margin-bottom: 3px;
+        font-size: 13px;
+    }
+    }
+    </style>
+    </head>
+    <body>
+
+    <div class="header">
+    <img src="https://res.cloudinary.com/daib0eknj/image/upload/v1770840245/Logo_H2O_st7uih.png" alt="Logo H2O">
+    <h1>RADIOS ASIGNADOS</h1>
+    </div>
+
+    <div class="container">
+    <div class="area">
+    <div class="area-title">LISTADO DE RADIOS ASIGNADOS — 21 UNIDADES</div>
+    <table class="tabla">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Cargo</th>
+            <th>Código Radio</th>
+            <th>Área</th>
+            <th>Canal</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td data-label="Nombre">John Nieto</td>
+            <td data-label="Cargo">Gestor de Mantenimiento</td>
+            <td data-label="Código Radio"><span class="codigo">S1</span></td>
+            <td data-label="Área">Mantenimiento</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Luis Ortiz</td>
+            <td data-label="Cargo">Gerente de Operaciones</td>
+            <td data-label="Código Radio"><span class="codigo">S2</span></td>
+            <td data-label="Área">Producción</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Javier Vargas</td>
+            <td data-label="Cargo">Coordinador de soplado </td>
+            <td data-label="Código Radio"><span class="codigo">S3</span></td>
+            <td data-label="Área">Soplado</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Astrid Gomez</td>
+            <td data-label="Cargo">Coordinadora de aseguramiento de calidad</td>
+            <td data-label="Código Radio"><span class="codigo">S4</span></td>
+            <td data-label="Área">Calidad</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Valentina Sanchez</td>
+            <td data-label="Cargo">Axuliar de logistica</td>
+            <td data-label="Código Radio"><span class="codigo">S5</span></td>
+            <td data-label="Área">Logistica</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Aquiles Gonzales</td>
+            <td data-label="Cargo">Montacarguista</td>
+            <td data-label="Código Radio"><span class="codigo">S6</span></td>
+            <td data-label="Área">Logistica</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Luis Oviedo</td>
+            <td data-label="Cargo">Montacarguista</td>
+            <td data-label="Código Radio"><span class="codigo">S8</span></td>
+            <td data-label="Área">Logistica</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Heider Vanegas / Daniel Bonilla </td>
+            <td data-label="Cargo">Analista de aguas / Analista de control</td>
+            <td data-label="Código Radio"><span class="codigo">S10</span></td>
+            <td data-label="Área">Calidad</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Bezaida Rojas / Leidy Rodriguez </td>
+            <td data-label="Cargo">Oficial de recepción y seguridad</td>
+            <td data-label="Código Radio"><span class="codigo">S11</span></td>
+            <td data-label="Área">Recepción</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Marcela Cardenas</td>
+            <td data-label="Cargo">Analista de procesos y estadística</td>
+            <td data-label="Código Radio"><span class="codigo">S12</span></td>
+            <td data-label="Área">Producción</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Luis Figueroa</td>
+            <td data-label="Cargo">Líder de Bodega</td>
+            <td data-label="Código Radio"><span class="codigo">S13</span></td>
+            <td data-label="Área">Logística</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Juan David Wilches</td>
+            <td data-label="Cargo">Coordinador de Logística</td>
+            <td data-label="Código Radio"><span class="codigo">S14</span></td>
+            <td data-label="Área">Logística</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Daniel Cubides</td>
+            <td data-label="Cargo">Director de Logistica</td>
+            <td data-label="Código Radio"><span class="codigo">S15</span></td>
+            <td data-label="Área">Logística</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Jorge Galeano</td>
+            <td data-label="Cargo">Jefe de Producción</td>
+            <td data-label="Código Radio"><span class="codigo">S16</span></td>
+            <td data-label="Área">Producción</td>
+            <td data-label="Canal"><span class="canal">00<span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Kevin Diaz</td>
+            <td data-label="Cargo">Analista de inventarios</td>
+            <td data-label="Código Radio"><span class="codigo">S17</span></td>
+            <td data-label="Área">Inventarios</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Edgar Velazquez</td>
+            <td data-label="Cargo">Montacarguista</td>
+            <td data-label="Código Radio"><span class="codigo">S18</span></td>
+            <td data-label="Área">Inventarios</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Michael Gutierrez</td>
+            <td data-label="Cargo">Montacarguista</td>
+            <td data-label="Código Radio"><span class="codigo">S19</span></td>
+            <td data-label="Área">Logistica</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Daniel Viracacha</td>
+            <td data-label="Cargo">Pendiente</td>
+            <td data-label="Código Radio"><span class="codigo">S20</span></td>
+            <td data-label="Área">Pendiente</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Ivan Mendoza</td>
+            <td data-label="Cargo">Coordinador de Mantenimiento</td>
+            <td data-label="Código Radio"><span class="codigo">S21</span></td>
+            <td data-label="Área">Mantenimiento</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Fredy Patiño</td>
+            <td data-label="Cargo">Coordinador de soplado</td>
+            <td data-label="Código Radio"><span class="codigo">S23</span></td>
+            <td data-label="Área">Soplado</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        <tr>
+            <td data-label="Nombre">Apolinar Centeno</td>
+            <td data-label="Cargo">Auxiliar de materias primas</td>
+            <td data-label="Código Radio"><span class="codigo">S26</span></td>
+            <td data-label="Área">Producción</td>
+            <td data-label="Canal"><span class="canal">00</span></td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+    </div>
+
+    </body>
+    </html>
