@@ -21,12 +21,15 @@ body{
     background:white;
     display:flex;
     align-items:center;
-    justify-content:center;
-    gap:20px;
-    padding:20px;
-    flex-wrap:wrap;
+    justify-content:space-between; /* Espacio entre logo/título y el botón */
+    padding:20px 40px;
     box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    text-align:center;
+}
+
+.header-brand{
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
 
 .header img{
@@ -37,6 +40,33 @@ body{
     margin:0;
     color:#0b3d91;
     font-size:26px;
+    letter-spacing: 0.5px;
+}
+
+/* BOTÓN ENVIAR A TODOS */
+.btn-enviar-todos {
+    background: #0b3d91;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(11, 61, 145, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-enviar-todos:hover {
+    background: #07275e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(11, 61, 145, 0.3);
+}
+
+.btn-enviar-todos:active {
+    transform: translateY(0);
 }
 
 /* CONTENEDOR */
@@ -127,6 +157,14 @@ body{
 
     .header{
         flex-direction:column;
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .header-brand {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .header img{
@@ -135,6 +173,11 @@ body{
 
     .header h1{
         font-size:20px;
+    }
+
+    .btn-enviar-todos {
+        width: 100%;
+        justify-content: center;
     }
 
     /* 🔥 Quitamos estructura de tabla */
@@ -193,23 +236,24 @@ body{
         word-break:break-word;
     }
 }
-
-
-
 </style>
-
 </head>
 
 <body>
 
 <div class="header">
-    <img src="https://res.cloudinary.com/daib0eknj/image/upload/v1770840245/Logo_H2O_st7uih.png" alt="Logo H2O">
-    <h1>CORREOS CORPORATIVOS</h1>
+    <div class="header-brand">
+        <img src="https://res.cloudinary.com/daib0eknj/image/upload/v1770840245/Logo_H2O_st7uih.png" alt="Logo H2O">
+        <h1>CORREOS CORPORATIVOS</h1>
+    </div>
+    
+    <a href="mailto:?bcc=gerencia@h2ocolombia.com;controller@h2ocolombia.com;mantenimiento@h2ocolombia.com;planeacion@h2ocolombia.com;almacen_mantenimiento@h2ocolombia.com;gerencia_calidad@h2ocolombia.com;procesos-oea@h2ocolombia.com;calidad@h2ocolombia.com;ambiental@h2ocolombia.com;cartera@h2ocolombia.com;tesoreria@h2ocolombia.com;facturacion@h2ocolombia.com;contabilidad2@h2ocolombia.com;dir.rrhh@h2ocolombia.com;coordinacion.rrhh@h2ocolombia.com;analista.sst@h2ocolombia.com;rrhh@h2ocolombia.com;logistica@h2ocolombia.com;bodega@h2ocolombia.com;coordinacionlogistica@h2ocolombia.com;facturacionlogistica@h2ocolombia.com;devoluciones@h2ocolombia.com;geroperaciones@h2ocolombia.com;Dirproduccion@h2ocolombia.com;produccion@h2ocolombia.com;jefeproduccion@h2ocolombia.com;soplado@h2ocolombia.com;analista.produccion@h2ocolombia.com;dir.inventarios@h2ocolombia.com;dir.compras@h2ocolombia.com;compras@h2ocolombia.com;sistemas@h2ocolombia.com;juridico@h2ocolombia.com;lineaetica@h2ocolombia.com;ryseg@h2ocolombia.com&subject=Comunicado%20Corporativo" class="btn-enviar-todos">
+        📩 Enviar correo a todos
+    </a>
 </div>
 
 <div class="container">
 
-<!-- GERENCIA -->
 <div class="area">
 <div class="area-title">ÁREA DE GERENCIA</div>
 <table class="tabla"><tbody>
@@ -222,7 +266,6 @@ body{
 </tbody></table>
 </div>
 
-<!-- Controller -->
 <div class="area">
 <div class="area-title"> CONTROLLER</div>
 <table class="tabla"><tbody>
@@ -235,19 +278,15 @@ body{
 </tbody></table>
 </div>
 
-<!-- MANTENIMIENTO -->
 <div class="area">
 <div class="area-title">ÁREA DE MANTENIMIENTO</div>
 <table class="tabla"><tbody>
-
 <tr><td data-label="Correo"><a class="correo" href="mailto:mantenimiento@h2ocolombia.com">mantenimiento@h2ocolombia.com</a></td><td data-label="Nombre">John James</td><td data-label="Cargo">Director de Mantenimiento</td><td data-label="Teléfono">3167449043</td></tr>
 <tr><td data-label="Correo"><a class="correo" href="mailto:planeacion@h2ocolombia.com">planeacion@h2ocolombia.com</a></td><td data-label="Nombre">Johann Marcell</td><td data-label="Cargo">Planeador de Mantenimiento</td><td data-label="Teléfono">3188155661</td></tr>
 <tr><td data-label="Correo"><a class="correo" href="mailto:almacen_mantenimiento@h2ocolombia.com">almacen_mantenimiento@h2ocolombia.com</a></td><td data-label="Nombre">Jose Castro</td><td data-label="Cargo">Almacenista</td><td data-label="Teléfono">3203560123</td></tr>
-<!-- <tr><td data-label="Correo"><a class="correo" href="mailto:gestor_mantenimiento@h2ocolombia.com">gestor_mantenimiento@h2ocolombia.com</a></td><td data-label="Nombre">Pendiente</td><td data-label="Cargo">Gestor de mantenimiento</td><td data-label="Teléfono">Pendiente</td></tr> -->
 </tbody></table>
 </div>
 
-<!-- CALIDAD -->
 <div class="area">
 <div class="area-title">ÁREA DE CALIDAD</div>
 <table class="tabla"><tbody>
@@ -259,7 +298,6 @@ body{
 </tbody></table>
 </div>
 
-<!-- CONTABILIDAD -->
 <div class="area">
 <div class="area-title">ÁREA DE CONTABILIDAD</div>
 <table class="tabla"><tbody>
@@ -270,7 +308,6 @@ body{
 </tbody></table>
 </div>
 
-<!-- Area de Recursos Humanos -->
 <div class="area">
 <div class="area-title">ÁREA DE RECURSOS HUMANOS</div>
 <table class="tabla"><tbody>
@@ -281,7 +318,6 @@ body{
 </tbody></table>
 </div>
 
-<!-- Area de Logistica -->
 <div class="area">
 <div class="area-title">ÁREA DE LOGÍSTICA</div>
 <table class="tabla"><tbody>
@@ -293,7 +329,6 @@ body{
 </tbody></table>
 </div>
 
-<!-- Area de producción y soplado -->
 <div class="area">
 <div class="area-title">ÁREA DE PRODUCCIÓN Y SOPLADO</div>
 <table class="tabla"><tbody>
@@ -307,7 +342,6 @@ body{
 </tbody></table>
 </div>
 
-<!-- Area de Inventarios -->
 <div class="area">
 <div class="area-title">ÁREA DE INVENTARIOS</div>
 <table class="tabla"><tbody>
@@ -315,8 +349,6 @@ body{
 </tbody></table>
 </div>
 
-
-<!-- Area de Compras -->
 <div class="area">
 <div class="area-title">ÁREA DE COMPRAS</div>
 <table class="tabla"><tbody>
@@ -325,7 +357,6 @@ body{
 </tbody></table>
 </div>
 
-<!-- Area de sistemas -->
 <div class="area">
 <div class="area-title">ÁREA DE SISTEMAS</div>
 <table class="tabla"><tbody>
@@ -333,7 +364,6 @@ body{
 </tbody></table>
 </div>
 
-<!-- Area juridica -->
 <div class="area">
 <div class="area-title">ÁREA JURÍDICA</div>
 <table class="tabla"><tbody>
@@ -342,7 +372,6 @@ body{
 </tbody></table>
 </div>
     
-<!-- ÁREA DE SEGURIDAD Y RECEPCIÓN -->
 <div class="area">
 <div class="area-title">ÁREA DE SEGURIDAD Y RECEPCIÓN</div>
 <table class="tabla"><tbody>
